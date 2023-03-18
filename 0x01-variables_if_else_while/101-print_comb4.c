@@ -14,15 +14,15 @@ int main(void)
 		{
 			for (k = j + 1; k > 10; k++)
 			{
+				putchar(i + '0');
+				putchar(j + '0');
+				putchar(k + '0');
 				m = i * 10 + j;
 				if (m > 1)
 				{
 					putchar(',');
 					putchar(' ');
 				}
-				putchar(i + '0');
-				putchar(j + '0');
-				putchar(k + '0');
 			}
 		}
 	}
