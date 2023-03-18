@@ -17,7 +17,7 @@ int main(void)
 				putchar(i + '0');
 				putchar(j + '0');
 				putchar(k + '0');
-				m = i * 10 + j;
+				m = i * 100 + j * 10 + k;
 				if (m > 1)
 				{
 					putchar(',');
