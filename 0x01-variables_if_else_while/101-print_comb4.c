@@ -16,7 +16,7 @@ int main(void)
 			{
 				m = i * 10 + j;
 				n = j * 10 + k;
-				if(n > 1 && m > 1)
+				if((n > 1) ||( m > 1))
 				{
 					putchar(',');
 					putchar(' ');
@@ -27,6 +27,7 @@ int main(void)
 			}
 		}
 	}
+	putchar('\n');
 	return (0);
 }
 					
