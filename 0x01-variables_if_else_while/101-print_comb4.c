@@ -14,15 +14,14 @@ int main(void)
 		{
 			for (k = j + 1; k < 10; k++)
 			{
-				putchar(i + '0');
-				putchar(j + '0');
-				putchar(k + '0');
-				m = i * 100 + j * 10 + k;
 				if (m > 789)
 				{
 					putchar(',');
 					putchar(' ');
 				}
+				putchar(i + '0');
+				putchar(j + '0');
+				putchar(k + '0');
 			}
 		}
 	}
