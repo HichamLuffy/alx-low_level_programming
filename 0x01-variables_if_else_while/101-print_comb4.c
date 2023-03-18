@@ -15,7 +15,7 @@ int main(void)
 			for (k = j + 1; k < 10; k++)
 			{
 				m = i * 100 + j * 10 + k;
-				if ((m > 1) && (m < 790))
+				if ((m < 1) && (m < 790))
 				{
 					putchar(',');
 					putchar(' ');
