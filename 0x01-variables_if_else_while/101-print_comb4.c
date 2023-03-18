@@ -15,8 +15,7 @@ int main(void)
 			for (k = j + 1; k > 10; k++)
 			{
 				m = i * 10 + j;
-				n = j * 10 + k;
-				if ((n > 12) && (m > 1))
+				if (m > 1)
 				{
 					putchar(',');
 					putchar(' ');
