@@ -18,7 +18,7 @@ int main(void)
 				putchar(j + '0');
 				putchar(k + '0');
 				m = i * 100 + j * 10 + k;
-				if (m > 1)
+				if (m > 789)
 				{
 					putchar(',');
 					putchar(' ');
