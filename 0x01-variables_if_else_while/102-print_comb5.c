@@ -21,9 +21,11 @@ int main(void)
 			putchar(' ');
 			putchar(m + '0');
 			putchar(n + '0');
-			if ((m < 9) && (n < 9))
+			if ((l < 9) && (k < 9))
+			{
 			putchar(',');
 			putchar(' ');
+			}
 		}
 	}
 	putchar('\n');
