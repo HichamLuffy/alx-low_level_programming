@@ -19,5 +19,4 @@ void jack_bauer(void)
 			if (h < 24)
 			_putchar('\n');
 		}
-	return (0);
 }
