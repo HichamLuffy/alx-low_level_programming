@@ -10,7 +10,7 @@ int main(void)
 {
 	int r;
 
-	r = print_sign(98);
+	r = print_sigh;
 	if (r < 0)
 		r *= -1;
 	_putchar(r + '0');
