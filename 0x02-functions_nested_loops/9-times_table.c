@@ -17,8 +17,8 @@ void times_table(void)
 			{
 				u = n % 10;
 				d = (n - u) / 10;
-				_putchar('0');
-				_putchar(',');
+				_putchar(44);
+				_putchar(32);
 				_putchar(d + '0');
 				_putchar(u + '0');
 			}
@@ -26,16 +26,16 @@ void times_table(void)
 			{
 				if (j != 0)
 				{
-					_putchar(',');
-					_putchar(' ');
-					_putchar(' ');
+					_putchar(44);
+					_putchar(32);
+					_putchar(32);
 				}
 				else
 				{
 				_putchar(n + '0');
 				}
 			}
+			putchar('\n');
 		}
 	}
-	_putchar('\n');
 }
