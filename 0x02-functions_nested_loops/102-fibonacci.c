@@ -11,6 +11,7 @@ int main(void)
 	i = 1;
 	while (i <= 50)
 	{
+		printf("%d, ", i);
 		u = i - 1;
 		i = u + i;
 		printf("%d, ", i);
