@@ -6,16 +6,19 @@
  */
 int main(void)
 {
-	int i, u, x;
+	int num1, num2, nextnum, i;
 
-	i = 1;
-	while (i <= 50)
+	num1 = 1;
+	num2 = 2;
+	printf("%d, %d, ", num1, num2);
+	for (i = 3; i <= 50; i++)
 	{
-		printf("%d, ", i);
-		u = i - 1;
-		x = u + i;
-		printf("%d, ", x);
-		i++;
+		nextnum = num1 + num2;
+		printf("%d, ", nextnum);
+		if (i != 50)
+			printf(", ");
+		num1 = num2;
+		num2 = nextnum;
 	}
 	printf("\n");
 	return (0);
