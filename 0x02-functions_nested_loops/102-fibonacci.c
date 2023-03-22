@@ -6,8 +6,10 @@
  */
 int main(void)
 {
-	int i, n;
+	int i;
+
 	for (i = 1; i <= 50; i = (i - 1) + i)
 		printf("%d, ", i);
 	printf("\n");
+	return (0);
 }
