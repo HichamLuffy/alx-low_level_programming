@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-	int i;
+	int i, u;
 
 	i = 1;
 	while (i <= 50)
