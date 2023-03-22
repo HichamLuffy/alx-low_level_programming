@@ -14,9 +14,7 @@ int main(void)
 	for (i = 3; i <= 50; i++)
 	{
 		nextnum = num1 + num2;
-		printf("%d, ", nextnum);
-		if (i != 50)
-			printf(", ");
+		printf(", %d", nextnum);
 		num1 = num2;
 		num2 = nextnum;
 	}
