@@ -6,15 +6,15 @@
  */
 int main(void)
 {
-	int i, u;
+	int i, u, x;
 
 	i = 1;
 	while (i <= 50)
 	{
 		printf("%d, ", i);
 		u = i - 1;
-		i = u + i;
-		printf("%d, ", i);
+		x = u + i;
+		printf("%d, ", x);
 		i++;
 	}
 	printf("\n");
