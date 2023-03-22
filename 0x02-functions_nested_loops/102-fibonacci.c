@@ -14,7 +14,7 @@ int main(void)
 	for (i = 3; i <= 50; i++)
 	{
 		nextnum = num1 + num2;
-		if (nextnum != 20365011074)
+		if (nextnum < 20365011075)
 			printf("%ld, ", nextnum);
 		num1 = num2;
 		num2 = nextnum;
