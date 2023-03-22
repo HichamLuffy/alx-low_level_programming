@@ -8,9 +8,9 @@ void print_to_98(int n)
 {
 	int num, i;
 
-	num = i;
 	for (i = n; i <= 98; i++)
 	{
+		num = i;
 		do
 		{
 			_putchar(num % 10 + '0');
@@ -22,5 +22,5 @@ void print_to_98(int n)
 		_putchar(' ');
 		}
 	}
-	putchar('\n');
+	_putchar('\n');
 }
