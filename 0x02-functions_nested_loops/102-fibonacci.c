@@ -8,8 +8,14 @@ int main(void)
 {
 	int i;
 
-	for (i = 1; i <= 50; i = (i - 1) + i)
+	i = 1;
+	while (i <= 50)
+	{
+		u = i - 1;
+		i = u + i;
 		printf("%d, ", i);
+		i++;
+	}
 	printf("\n");
 	return (0);
 }
