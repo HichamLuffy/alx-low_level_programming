@@ -10,11 +10,11 @@ int main(void)
 
 	num1 = 1;
 	num2 = 2;
-	printf("%d, %d, ", num1, num2);
+	printf("%ld, %ld, ", num1, num2);
 	for (i = 3; i <= 50; i++)
 	{
 		nextnum = num1 + num2;
-		printf(", %d", nextnum);
+		printf(", %ld", nextnum);
 		num1 = num2;
 		num2 = nextnum;
 	}
