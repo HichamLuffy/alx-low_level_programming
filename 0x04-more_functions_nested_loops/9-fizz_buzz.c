@@ -1,3 +1,4 @@
+#include "main.h"
 #include <stdio.h>
 
 /**
@@ -5,7 +6,7 @@
  *
  *Return: Always 0.
  */
-int main(void)
+void main(void)
 {
 	int i;
 
@@ -30,6 +31,5 @@ int main(void)
 			printf(" %d", i);
 		}
 	}
-	putchar('\n');
-	return (0);
+	printf("\n");
 }
