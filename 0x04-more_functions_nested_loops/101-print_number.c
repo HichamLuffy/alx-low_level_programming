@@ -1,5 +1,5 @@
 #include "main.h"
-#include <std.io.h>
+#include <stdio.h>
 
 /**
  * print_number - print an integer
