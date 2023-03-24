@@ -1,12 +1,11 @@
 #include "main.h"
 #include <stdio.h>
-
 /**
  *main - check the code
  *
  *Return: Always 0.
  */
-void main(void)
+int main(void)
 {
 	int i;
 
@@ -32,4 +31,5 @@ void main(void)
 		}
 	}
 	printf("\n");
+	return (0);
 }
