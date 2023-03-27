@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 /**
- *main - check the code
+ *int _strlen - check the code
  *@s :parametre
  *Return: Always 0.
  */
