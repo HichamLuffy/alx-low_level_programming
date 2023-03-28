@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  *_atoi - check the code
- *
+ *@s: parametre
  *Return: Always 0.
  */
 int _atoi(char *s)
