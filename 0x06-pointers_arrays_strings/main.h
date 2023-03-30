@@ -1,4 +1,4 @@
-fndef MAIN_H
+#ifndef MAIN_H
 #define MAIN_H
 
 #include <stdio.h>
@@ -27,4 +27,6 @@ char infinite_add(charn1, char n2, charr, int size_r);
 
 void print_buffer(char b, int size);
 
-#endif / MAIN_H */
+int _putchar(char);
+
+#endif / MAIN_H /
