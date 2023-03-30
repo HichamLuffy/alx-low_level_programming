@@ -1,14 +1,14 @@
 #include "main.h"
 /**
- *main - check the code
- *
+ *_strcat - check the code
+ *@dest: parametre
+ *@src: parametre
  *Return: Always 0.
  */
 char *_strcat(char *dest, char *src)
 {
-	int j, i;
-	
-       	i = 0;
+	int j, i = 0;
+
 	while (dest[i] != '\0')
 		i++;
 	j = 0;
