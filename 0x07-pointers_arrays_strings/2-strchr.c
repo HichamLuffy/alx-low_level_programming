@@ -1,11 +1,13 @@
 #include "main.h"
 #include <stdlib.h>
+
 /**
- * _strchr - check the code
- *@s: parametre
- *@c: parametre
+ * _strchr - locates a character in a string.
+ * @s: parametre.
+ * @c: parametre.
  * Return: Always 0.
  */
+
 char *_strchr(char *s, char c)
 {
 	int i;
