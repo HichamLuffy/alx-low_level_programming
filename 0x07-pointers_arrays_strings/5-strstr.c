@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * _strstr - check the code
+ *_strstr - check the code
  *@haystack: parametre
  *@needle: parametre
  * Return: Always 0.
