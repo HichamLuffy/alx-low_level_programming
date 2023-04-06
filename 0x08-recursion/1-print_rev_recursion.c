@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * void _print_rev_recursion(char *s) - check the code
+ * void _print_rev_recursion - check the code
  *@s: parametre
  * Return: Always 0.
  */
