@@ -2,7 +2,7 @@
 /**
  * wildcmp - check the code
  *@s1: parametre
- *s2: parametre
+ *@s2: parametre
  * Return: Always 0.
  */
 int wildcmp(char *s1, char *s2)
