@@ -75,18 +75,23 @@ int main(int argc, char *argv[])
 	}
 	else
 	{
+		i = 1;
 		b = 0;
-		for (i = 1; i < argc; i++)
+		while (i < argc)
 		{
-			if (check_num(argv[i]))
+			if (!check_num(argv[i]))
+			{
+				printf("Error\n");
+				return (0);
+			}
+			else
 			{
 				a = _atoi(argv[i]);
 				b += a;
 			}
-			else
-				printf("Error\n");
+			i++;
 		}
-		printf("%d\n", b);
 	}
+		printf("%d\n", b);
 	return (0);
 }
