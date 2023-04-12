@@ -11,7 +11,7 @@ char *str_concat(char *s1, char *s2)
 	char *som;
 	int i, k;
 
-	if (!s1 && !s2)
+	if (!s1 || !s2)
 		return (NULL);
 	i = 0;
 	while (s1[i] != '\0')
@@ -19,7 +19,7 @@ char *str_concat(char *s1, char *s2)
 	k = 0;
 	while (s2[k] != '\0')
 		k++;
-	som = malloc(sizeof(char) * (i + k + 2));
+	som = malloc(sizeof(char) * (i + k + 1));
 	if (som == NULL)
 		return (NULL);
 	i = 0;
