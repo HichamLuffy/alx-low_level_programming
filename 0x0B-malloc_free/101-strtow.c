@@ -21,16 +21,11 @@ int _strlen(char *s)
 }
 
 /**
- * * _strncpy - copies n bytes from src to dest
- *
+ * _strncpy - copies n bytes from src to dest
  * @dest: the destination string
- *
  * @src: the source string
- *
  * @n: the number of bytes
- *
  * Return: dest
- *
  */
 
 char *_strncpy(char *dest, char *src, int n)
@@ -38,35 +33,22 @@ char *_strncpy(char *dest, char *src, int n)
 	int i;
 
 	i = 0;
-
 	while (src[i] && i < n)
-
 	{
-
 		dest[i] = src[i];
-
 		i++;
-
 	}
-
 	if (i < n)
-
 	{
-
 		while (dest[i])
-
 		{
-
 			dest[i] = '\0';
-
 			i++;
-
 		}
-
 	}
-
 	return (dest);
 }
+
 /**
  * isspace - checks if character is space
  * @c: the char
@@ -124,41 +106,31 @@ char **strtow(char *str)
 	char **words;
 
 	if (str == NULL || _strlen(str) == 0 || count_words(str) == 0)
-
-	
 		return (NULL);
-	num_wor
-		s = count_words(str);
-	words =
-		malloc(sizeof(char *) * (num_words + 1));
-	if (wor
-			s == NULL)
+	num_words = count_words(str);
+	words = malloc(sizeof(char *) * (num_words + 1));
+	if (words == NULL)
 		return (NULL);
-	while (str[i] !
-		       	'\0' && j < num_words)
-	
-
-	
-		start = i;
-	
-	while (str[i] != ' ' && str[i] != '\0')
-
-		i++;
-	end = i;
-	word_length = end - start;
-	if (word_length > 0)
+	while (str[i] != '\0' && j < num_words)
 	{
-		word = malloc(sizeof(char) * (word_length + 1));
-		if (word == NULL)
-			return (NULL);
-		_strncpy(word, str + start, word_length);
-		word[word_length] = '\0';
-		words[j] = word;
-		j++;
+		start = i;
+		while (str[i] != ' ' && str[i] != '\0')
+			i++;
+		end = i;
+		word_length = end - start;
+		if (word_length > 0)
+		{
+			word = malloc(sizeof(char) * (word_length + 1));
+			if (word == NULL)
+				return (NULL);
+			_strncpy(word, str + start, word_length);
+			word[word_length] = '\0';
+			words[j] = word;
+			j++;
+		}
+		else
+			i++;
 	}
-	else
-		i++;
-}
-words[j] = NULL;
-return (words);
+	words[j] = NULL;
+	return (words);
 }
