@@ -2,8 +2,9 @@
 #include <stdarg.h>
 #include <stdio.h>
 /**
- * void print_all - check the code
+ *print_all - check the code
  *@format: parametre
+ *@...: parametre
  * Return: Always 0.
  */
 void print_all(const char * const format, ...)
@@ -42,7 +43,7 @@ void print_all(const char * const format, ...)
 			sep = ", ";
 			i++;
 		}
+	}
 	printf("\n");
 	va_end(ap);
-	}
 }
