@@ -2,7 +2,7 @@
 #include "variadic_functions.h"
 #include <stdarg.h>
 /**
- * print_numbers - check the code
+ * print_strings - check the code
  *@separator: parametre
  *@n: parametre
  *@...: parametre
