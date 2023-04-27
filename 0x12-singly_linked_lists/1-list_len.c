@@ -7,12 +7,12 @@
  */
 size_t list_len(const list_t *h)
 {
-        size_t sum = 0;
+	size_t sum = 0;
 
-        while (h)
-        {
-                h = h->next;
-                sum++;
-        }
-        return (sum);
+	while (h)
+	{
+		h = h->next;
+		sum++;
+	}
+	return (sum);
 }
