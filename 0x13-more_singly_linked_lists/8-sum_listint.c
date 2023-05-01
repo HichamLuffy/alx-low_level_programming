@@ -1,4 +1,9 @@
 #include "lists.h"
+/**
+ * sum_listint - check your code
+ * @head: parametre
+ * Return: sum
+ */
 int sum_listint(listint_t *head)
 {
 	listint_t *temp = head;
