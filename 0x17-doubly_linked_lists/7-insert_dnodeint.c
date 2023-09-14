@@ -1,37 +1,66 @@
 #include "lists.h"
+
 /**
- * insert_dnodeint_at_index - inserts a new node at a given position
- * @h: head of the list
- * @idx: index of the node
- * @n: integer
- * Return: pointer to the new node
+ * dlistint_len - computing the length of a double linked list
+ * @h: the head
+ * Return: the size of the list
  */
+
+size_t dlistint_len(const dlistint_t *h)
+{
+	const dlistint_t *cur = h;
+	size_t size = 0;
+
+	while (cur != NULL)
+	{
+		cur = cur->next;
+		size++;
+	}
+
+	return (size);
+}
+
+/**
+ * insert_dnodeint_at_index - insert node at index
+ *
+ * @h: the head
+ * @idx: index to insert at
+ * @n: data n for the new node
+ * Return: pointer the newly created node
+ */
+
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	dlistint_t *tmp;
 	dlistint_t *new;
+	dlistint_t *cur, *next;
+
+	if (h == NULL || idx > dlistint_len(*h))
+		return (NULL);
+
+	if (idx == 0)
+		return (add_dnodeint(h, n));
+
+	if (idx == dlistint_len(*h))
+		return (add_dnodeint_end(h, n));
+
+	cur = *h;
+	while (idx > 1)
+	{
+		cur = cur->next;
+		idx--;
+	}
+
+	next = cur->next;
 
 	new = malloc(sizeof(dlistint_t));
 	if (new == NULL)
 		return (NULL);
-    if (idx == 0)
-    {
-        new->n = n;
-        new->next = *h;
-        new->prev = NULL;
-    }
-    
-    tmp = *h;
-    while (idx > 0)
-    {
-        tmp = tmp->next;
-        idx--;
-    }
-    new->n = n;
-    new->next = tmp;
-    new->prev = tmp->prev;
-    tmp->prev->next = new;
-    tmp->prev = new;
-    
+
+	new->n = n;
+	new->prev = cur;
+	new->next = next;
+	cur->next = new;
+	next->prev = new;
+
 	return (new);
 }
