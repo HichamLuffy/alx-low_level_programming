@@ -18,6 +18,8 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 	tmp = head;
 	while (index > 0)
 	{
+		if (tmp->next == NULL)
+			return (NULL);
 		tmp = tmp->next;
 		index--;
 	}
