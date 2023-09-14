@@ -4,7 +4,7 @@
  * @head: head of the list
  * @index: index of the node
  * Return: nth node
-*/
+ */
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
 	dlistint_t *tmp;
@@ -16,7 +16,7 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 		return (head);
 
 	tmp = head;
-	while (index > 1)
+	while (index > 0)
 	{
 		tmp = tmp->next;
 		index--;
