@@ -20,7 +20,7 @@ int div(int i, int j)
  */
 int mod(int i, int j)
 {
-	return 0;
+	return (i % j);
 }
 /**
  * add - adds two integers
