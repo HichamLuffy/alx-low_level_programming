@@ -3,16 +3,17 @@
  * hash_table_delete - deletes a hash table
  * @ht: hash table
  * Return: void
-*/
+ */
 void hash_table_delete(hash_table_t *ht)
 {
-	unsigned long int i = 0;
+	unsigned long int i = 0, size;
 	hash_node_t *tmp, *curr;
 
 	if (ht == NULL)
 		return;
+	size = ht->size;
 
-	while (i < ht->size)
+	while (i < size)
 	{
 		curr = ht->array[i];
 		while (curr)
@@ -20,7 +21,7 @@ void hash_table_delete(hash_table_t *ht)
 			tmp = curr;
 			curr = curr->next;
 			free(tmp->value);
-            free(tmp);
+			free(tmp);
 		}
 		i++;
 
