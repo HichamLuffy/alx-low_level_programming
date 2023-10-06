@@ -1,23 +1,5 @@
 #include "hash_tables.h"
 
-void free_node(hash_node_t *node)
-{
-    free(node->value);
-}
-void free_table(hash_table_t *ht)
-{
-    hash_node_t *tmp;
-    unsigned long int i = 0;
-    for (i = 0; i < ht->size; i++)
-    {
-        tmp = ht->array[i];
-        if (tmp)
-            free_node(tmp);
-    }
-    free(ht->array);
-    free(ht);
-}
-
 /**
  * hash_table_delete - deletes a hash table
  * @ht: hash table
@@ -25,27 +7,24 @@ void free_table(hash_table_t *ht)
  */
 void hash_table_delete(hash_table_t *ht)
 {
-	unsigned long int i = 0, size;
-	hash_node_t *tmp, *curr;
+    unsigned long int i = 0;
+    hash_node_t *tmp, *curr;
 
-	if (ht == NULL)
-		return;
-	size = ht->size;
+    if (ht == NULL)
+        return;
 
-	while (i < size)
-	{
-		curr = ht->array[i];
-		while (curr)
-		{
-			tmp = curr;
-			curr = curr->next;
-			free(tmp->value);
-			free(tmp);
-		}
-		i++;
-
-	}
+    for (i = 0; i < ht->size; i++)
+    {
+        curr = ht->array[i];
+        while (curr)
+        {
+            tmp = curr;
+            curr = curr->next;
+            free(tmp->key);
+            free(tmp->value);
+            free(tmp);
+        }
+    }
     free(ht->array);
-    free_table(ht);
     free(ht);
 }
