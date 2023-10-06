@@ -1,7 +1,7 @@
 #include "hash_tables.h"
 
 /**
- * hash_table_create - create a hash table
+ * shash_table_create - create a hash table
  * @size: The size of the array
  * Return: hash table
  */
@@ -22,7 +22,7 @@ shash_table_t *shash_table_create(unsigned long int size)
 }
 
 /**
- * hash_table_set - create a element in the hash table
+ * shash_table_set - create a element in the hash table
  * @ht: hash table
  * @key: key
  * @value: value
